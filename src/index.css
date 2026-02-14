@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-secondary text-accent font-poppins antialiased overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold-gradient text-secondary font-semibold px-6 py-2.5 rounded-full hover:shadow-gold-glow transition-all duration-300 active:scale-95 text-center inline-block;
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-2.5 rounded-full hover:bg-primary hover:text-secondary transition-all duration-300 active:scale-95 text-center inline-block;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .text-gold {
+    @apply bg-gold-gradient bg-clip-text text-transparent;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-all;
+}
+
+.bg-hero-pattern {
+  background: radial-gradient(circle at center, rgba(184, 134, 11, 0.15) 0%, rgba(10, 10, 10, 1) 70%);
+}
